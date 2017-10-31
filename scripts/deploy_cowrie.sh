@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # tested on AWS: Ubuntu 14.04.5 LTS
-# 
+# tested on Ubuntu 16.04.3 LTS
 
 set -e
 set -x
@@ -27,6 +27,9 @@ chmod 755 registration.sh
 apt-get update
 apt-get -y install python-dev git supervisor authbind openssl python-virtualenv build-essential python-gmpy2 libgmp-dev libmpfr-dev libmpc-dev libssl-dev python-pip libffi-dev
 
+pip install --upgrade pip
+pip install -U setuptools
+pip install -U virtualenv
 pip install -U supervisor
 /etc/init.d/supervisor start || true
 
