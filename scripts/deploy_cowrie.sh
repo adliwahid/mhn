@@ -47,7 +47,7 @@ source cowrie-env/bin/activate
 pip install csirtgsdk==0.0.0a6
 pip install -r requirements.txt 
 
-cp cowrie.cfg.dist cowrie.cfg
+cp etc/cowrie.cfg.dist cowrie.cfg
 sed -i 's/hostname = svr04/hostname = server/g' cowrie.cfg
 sed -i 's/#listen_port = 2222/listen_port = 22/g' cowrie.cfg
 sed -i 's/listen_endpoints = tcp:2222:interface=0.0.0.0/listen_endpoints = tcp:22:interface=0.0.0.0/g' cowrie.cfg
